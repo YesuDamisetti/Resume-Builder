@@ -966,8 +966,14 @@
                             <span>🌐</span>
                             <span id="previewWebsite"></span>
                         </div>
-                        <span id="previewLinkedIn" style="display: none;"></span>
-                        <span id="previewGitHub" style="display: none;"></span>
+                        <div class="contact-item" id="previewLinkedInContainer" style="display: none;">
+                            <span>💼</span>
+                            <span id="previewLinkedIn"></span>
+                        </div>
+                        <div class="contact-item" id="previewGitHubContainer" style="display: none;">
+                            <span>💻</span>
+                            <span id="previewGitHub"></span>
+                        </div>
                     </div>
                 </div>
 
@@ -1567,24 +1573,24 @@
                 websiteContainer.style.display = 'none';
             }
 
-            // Update LinkedIn
+            // Update LinkedIn - FIXED TO SHOW ACTUAL URL
             const linkedin = document.getElementById('linkedin').value;
-            const linkedinPreview = document.getElementById('previewLinkedIn');
+            const linkedinContainer = document.getElementById('previewLinkedInContainer');
             if (linkedin) {
-                linkedinPreview.style.display = 'inline';
-                linkedinPreview.innerHTML = `<div class="contact-item"><span>💼</span><span>LinkedIn</span></div>`;
+                document.getElementById('previewLinkedIn').textContent = linkedin;
+                linkedinContainer.style.display = 'flex';
             } else {
-                linkedinPreview.style.display = 'none';
+                linkedinContainer.style.display = 'none';
             }
 
-            // Update GitHub
+            // Update GitHub - FIXED TO SHOW ACTUAL URL
             const github = document.getElementById('github').value;
-            const githubPreview = document.getElementById('previewGitHub');
+            const githubContainer = document.getElementById('previewGitHubContainer');
             if (github) {
-                githubPreview.style.display = 'inline';
-                githubPreview.innerHTML = `<div class="contact-item"><span>💻</span><span>GitHub</span></div>`;
+                document.getElementById('previewGitHub').textContent = github;
+                githubContainer.style.display = 'flex';
             } else {
-                githubPreview.style.display = 'none';
+                githubContainer.style.display = 'none';
             }
 
             // Update summary
