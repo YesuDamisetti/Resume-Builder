@@ -1,4 +1,4 @@
-# Professional Resume Builder Pro
+# Professional Resume Builder
 
 A modern, responsive web application for creating professional resumes with real-time preview and PDF export functionality. Built with vanilla HTML, CSS, and JavaScript for optimal performance and accessibility.
 
